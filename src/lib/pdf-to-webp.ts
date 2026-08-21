@@ -35,6 +35,5 @@ export async function pdfToWebpBlobs(file: File): Promise<{ blob: Blob; name: st
     out.push({ blob: await compressToWebp(rendered), name: `${file.name}-hal-${i}` });
   }
 
-  await doc.destroy();
   return out;
 }
