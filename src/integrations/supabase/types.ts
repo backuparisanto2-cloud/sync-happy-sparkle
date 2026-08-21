@@ -32,6 +32,75 @@ export type Database = {
         }
         Relationships: []
       }
+      expense_locations: {
+        Row: {
+          created_at: string
+          name: string
+          sort_order: number
+        }
+        Insert: {
+          created_at?: string
+          name: string
+          sort_order?: number
+        }
+        Update: {
+          created_at?: string
+          name?: string
+          sort_order?: number
+        }
+        Relationships: []
+      }
+      expenses: {
+        Row: {
+          amount: number
+          attachments: Json
+          category: string
+          created_at: string
+          dues_contact: string | null
+          dues_name: string | null
+          expense_date: string
+          id: string
+          invoice_no: string | null
+          location: string | null
+          name: string
+          notes: string | null
+          updated_at: string
+          vendor: string | null
+        }
+        Insert: {
+          amount?: number
+          attachments?: Json
+          category?: string
+          created_at?: string
+          dues_contact?: string | null
+          dues_name?: string | null
+          expense_date?: string
+          id?: string
+          invoice_no?: string | null
+          location?: string | null
+          name: string
+          notes?: string | null
+          updated_at?: string
+          vendor?: string | null
+        }
+        Update: {
+          amount?: number
+          attachments?: Json
+          category?: string
+          created_at?: string
+          dues_contact?: string | null
+          dues_name?: string | null
+          expense_date?: string
+          id?: string
+          invoice_no?: string | null
+          location?: string | null
+          name?: string
+          notes?: string | null
+          updated_at?: string
+          vendor?: string | null
+        }
+        Relationships: []
+      }
       room_items: {
         Row: {
           brand: string | null
