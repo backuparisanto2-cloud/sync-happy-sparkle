@@ -1,5 +1,13 @@
 import { Link } from "@tanstack/react-router";
-import { LayoutDashboard, DoorClosed, Wrench, FileBarChart, Menu, Type } from "lucide-react";
+import {
+  LayoutDashboard,
+  DoorClosed,
+  Wrench,
+  FileBarChart,
+  Wallet,
+  Menu,
+  Type,
+} from "lucide-react";
 import { useState, type ReactNode } from "react";
 
 import { Button } from "@/components/ui/button";
