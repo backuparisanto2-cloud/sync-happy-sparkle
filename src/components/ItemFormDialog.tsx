@@ -27,6 +27,8 @@ import { addCondition, conditionsQuery, SHARED_CATEGORIES } from "@/lib/inventor
 
 export type ItemFormValues = {
   name: string;
+  brand: string;
+  serial_number: string;
   quantity: number;
   condition: string;
   notes: string;
@@ -43,6 +45,8 @@ export type ItemFormValues = {
 function initialValues(initial?: Partial<ItemFormValues>): ItemFormValues {
   return {
     name: initial?.name ?? "",
+    brand: initial?.brand ?? "",
+    serial_number: initial?.serial_number ?? "",
     quantity: initial?.quantity ?? 1,
     condition: initial?.condition ?? "Baik",
     notes: initial?.notes ?? "",
@@ -230,6 +234,26 @@ export function ItemFormDialog({
             <p className="text-[11px] tracking-[0.14em] text-muted-foreground uppercase">
               Data pembelian
             </p>
+            <div className="grid grid-cols-2 gap-3">
+              <div className="space-y-2">
+                <Label htmlFor="item-brand">Merk</Label>
+                <Input
+                  id="item-brand"
+                  value={values.brand}
+                  onChange={(e) => set("brand", e.target.value)}
+                  placeholder="Contoh: Samsung"
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="item-sn">Serial number</Label>
+                <Input
+                  id="item-sn"
+                  value={values.serial_number}
+                  onChange={(e) => set("serial_number", e.target.value)}
+                  placeholder="Contoh: SN-00123"
+                />
+              </div>
+            </div>
             <div className="space-y-2">
               <Label htmlFor="item-vendor">Vendor / toko</Label>
               <Input

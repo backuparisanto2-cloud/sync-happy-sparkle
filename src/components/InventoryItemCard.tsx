@@ -13,6 +13,8 @@ export function InventoryItemCard({
   quantity,
   notes,
   meta,
+  brand,
+  serialNumber,
   vendor,
   purchasePrice,
   warrantyUntil,
@@ -26,6 +28,8 @@ export function InventoryItemCard({
   quantity: number;
   notes?: string | null;
   meta?: string | null;
+  brand?: string | null;
+  serialNumber?: string | null;
   vendor?: string | null;
   purchasePrice?: number | null;
   warrantyUntil?: string | null;
@@ -66,6 +70,8 @@ export function InventoryItemCard({
           {meta ? <p className="mt-1 text-xs text-muted-foreground">{meta}</p> : null}
 
           <div className="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-xs text-muted-foreground">
+            {brand ? <span className="truncate">Merk: {brand}</span> : null}
+            {serialNumber ? <span className="truncate">SN: {serialNumber}</span> : null}
             {vendor ? <span className="truncate">Vendor: {vendor}</span> : null}
             {price ? <span className="text-foreground">{price}</span> : null}
             {warranty ? (
