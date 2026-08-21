@@ -30,7 +30,7 @@ export async function pdfToWebpBlobs(file: File): Promise<{ blob: Blob; name: st
     canvas.height = Math.round(viewport.height);
     const ctx = canvas.getContext("2d");
     if (!ctx) throw new Error("Browser tidak mendukung render PDF");
-    await page.render({ canvas, canvasContext: ctx, viewport }).promise;
+    await page.render({ canvasContext: ctx, viewport }).promise;
     const rendered = await canvasToFile(canvas, `${file.name}-hal-${i}.png`);
     out.push({ blob: await compressToWebp(rendered), name: `${file.name}-hal-${i}` });
   }
