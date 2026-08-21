@@ -34,6 +34,7 @@ export type Database = {
       }
       room_items: {
         Row: {
+          brand: string | null
           condition: string
           created_at: string
           id: string
@@ -46,11 +47,13 @@ export type Database = {
           quantity: number
           receipts: Json
           room_id: string
+          serial_number: string | null
           updated_at: string
           vendor: string | null
           warranty_until: string | null
         }
         Insert: {
+          brand?: string | null
           condition?: string
           created_at?: string
           id?: string
@@ -63,11 +66,13 @@ export type Database = {
           quantity?: number
           receipts?: Json
           room_id: string
+          serial_number?: string | null
           updated_at?: string
           vendor?: string | null
           warranty_until?: string | null
         }
         Update: {
+          brand?: string | null
           condition?: string
           created_at?: string
           id?: string
@@ -80,6 +85,7 @@ export type Database = {
           quantity?: number
           receipts?: Json
           room_id?: string
+          serial_number?: string | null
           updated_at?: string
           vendor?: string | null
           warranty_until?: string | null
@@ -123,6 +129,7 @@ export type Database = {
       }
       shared_items: {
         Row: {
+          brand: string | null
           category: string
           condition: string
           created_at: string
@@ -135,11 +142,13 @@ export type Database = {
           purchase_price: number | null
           quantity: number
           receipts: Json
+          serial_number: string | null
           updated_at: string
           vendor: string | null
           warranty_until: string | null
         }
         Insert: {
+          brand?: string | null
           category?: string
           condition?: string
           created_at?: string
@@ -152,11 +161,13 @@ export type Database = {
           purchase_price?: number | null
           quantity?: number
           receipts?: Json
+          serial_number?: string | null
           updated_at?: string
           vendor?: string | null
           warranty_until?: string | null
         }
         Update: {
+          brand?: string | null
           category?: string
           condition?: string
           created_at?: string
@@ -169,6 +180,7 @@ export type Database = {
           purchase_price?: number | null
           quantity?: number
           receipts?: Json
+          serial_number?: string | null
           updated_at?: string
           vendor?: string | null
           warranty_until?: string | null
