@@ -57,8 +57,11 @@ function RoomDetail() {
 
   const room = (rooms.data ?? []).find((r) => r.number === nomor);
   const roomItems = (items.data ?? []).filter((i) => i.room_id === room?.id);
+  const kw = keyword.trim().toLowerCase();
   const list = roomItems.filter((i) =>
-    i.name.toLowerCase().includes(keyword.trim().toLowerCase()),
+    [i.name, i.brand, i.serial_number]
+      .filter(Boolean)
+      .some((v) => String(v).toLowerCase().includes(kw)),
   );
 
   const refresh = () => queryClient.invalidateQueries({ queryKey: ["room_items"] });
