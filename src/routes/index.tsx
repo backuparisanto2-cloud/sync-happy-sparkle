@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { DoorClosed, Wrench, AlertTriangle, Boxes, Wallet } from "lucide-react";
 
 import { AppShell } from "@/components/AppShell";
+import { ExpenseSummary } from "@/components/ExpenseSummary";
 import { ConditionBadge } from "@/components/ConditionBadge";
 import {
   allRoomItemsQuery,
@@ -153,6 +154,7 @@ function Dashboard() {
         )}
       </div>
 
+      <ExpenseSummary />
 
       <div className="mt-6 grid gap-4 lg:grid-cols-2">
         <div className="gold-card rounded-xl p-5">
