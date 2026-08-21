@@ -25,6 +25,7 @@ const nav = [
   { to: "/", label: "Ringkasan", icon: LayoutDashboard },
   { to: "/kamar", label: "Kamar", icon: DoorClosed },
   { to: "/fasilitas", label: "Fasilitas Utama", icon: Wrench },
+  { to: "/pengeluaran", label: "Pengeluaran", icon: Wallet },
   { to: "/laporan", label: "Laporan", icon: FileBarChart },
 ] as const;
 
