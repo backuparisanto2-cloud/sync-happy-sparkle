@@ -153,6 +153,7 @@ function Dashboard() {
         )}
       </div>
 
+      <ExpenseSummary />
 
       <div className="mt-6 grid gap-4 lg:grid-cols-2">
         <div className="gold-card rounded-xl p-5">
