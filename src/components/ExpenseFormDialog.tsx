@@ -259,10 +259,7 @@ export function ExpenseFormDialog({
 
           <div className="space-y-2">
             <Label>Peruntukan di (lokasi kost)</Label>
-            <Select
-              value={values.location || undefined}
-              onValueChange={(v) => set("location", v)}
-            >
+            <Select value={values.location} onValueChange={(v) => set("location", v)}>
               <SelectTrigger>
                 <SelectValue placeholder="Pilih lokasi" />
               </SelectTrigger>
