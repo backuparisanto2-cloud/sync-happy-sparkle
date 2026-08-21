@@ -34,6 +34,8 @@ export type Room = {
 };
 
 type PurchaseFields = {
+  brand: string | null;
+  serial_number: string | null;
   vendor: string | null;
   purchase_price: number | null;
   purchase_date: string | null;
