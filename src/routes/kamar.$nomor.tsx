@@ -150,6 +150,8 @@ function RoomDetail() {
               condition={item.condition}
               quantity={item.quantity}
               notes={item.notes}
+              brand={item.brand}
+              serialNumber={item.serial_number}
               vendor={item.vendor}
               purchasePrice={item.purchase_price}
               warrantyUntil={item.warranty_until}

@@ -77,7 +77,7 @@ function normalize<T extends { photos: unknown; receipts: unknown }>(row: T) {
 }
 
 const ITEM_COLUMNS =
-  "vendor, purchase_price, purchase_date, warranty_until, photos, receipts";
+  "brand, serial_number, vendor, purchase_price, purchase_date, warranty_until, photos, receipts";
 
 export const roomsQuery = {
   queryKey: ["rooms"] as const,
@@ -135,6 +135,8 @@ export async function addCondition(name: string) {
 
 export type ItemPayload = {
   name: string;
+  brand?: string | null;
+  serial_number?: string | null;
   quantity: number;
   condition: string;
   notes?: string | null;

@@ -105,7 +105,7 @@ function SharedFacilities() {
       if (category !== "Semua" && i.category !== category) return false;
       if (condition !== "Semua" && i.condition !== condition) return false;
       if (!q) return true;
-      return [i.name, i.location, i.vendor, i.notes, i.category]
+      return [i.name, i.brand, i.serial_number, i.location, i.vendor, i.notes, i.category]
         .filter(Boolean)
         .some((v) => String(v).toLowerCase().includes(q));
     });
@@ -266,6 +266,8 @@ function SharedFacilities() {
               quantity={item.quantity}
               notes={item.notes}
               meta={`${item.category}${item.location ? ` · ${item.location}` : ""}`}
+              brand={item.brand}
+              serialNumber={item.serial_number}
               vendor={item.vendor}
               purchasePrice={item.purchase_price}
               warrantyUntil={item.warranty_until}

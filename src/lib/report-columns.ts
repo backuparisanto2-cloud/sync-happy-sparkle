@@ -59,6 +59,8 @@ export type ColumnKey =
   | "roomNumber"
   | "quantity"
   | "condition"
+  | "brand"
+  | "serial_number"
   | "vendor"
   | "purchase_price"
   | "nilai_total"
@@ -89,6 +91,8 @@ export const ALL_COLUMNS: ColumnDef[] = [
   { key: "roomNumber", label: "Nomor Kamar", type: "text", value: (r) => r.roomNumber },
   { key: "quantity", label: "Jumlah", type: "number", value: (r) => r.quantity },
   { key: "condition", label: "Kondisi", type: "text", value: (r) => r.condition },
+  { key: "brand", label: "Merk", type: "text", value: (r) => r.brand },
+  { key: "serial_number", label: "Serial Number", type: "text", value: (r) => r.serial_number },
   { key: "vendor", label: "Vendor", type: "text", value: (r) => r.vendor },
   { key: "purchase_price", label: "Harga Satuan", type: "currency", value: (r) => r.purchase_price },
   { key: "nilai_total", label: "Total Pembelian", type: "currency", value: (r) => r.nilai_total },
@@ -109,6 +113,7 @@ export const DEFAULT_COLUMN_KEYS: ColumnKey[] = [
   "group",
   "quantity",
   "condition",
+  "brand",
   "vendor",
   "purchase_price",
   "nilai_total",

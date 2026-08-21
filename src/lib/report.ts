@@ -11,6 +11,8 @@ export type ReportRow = {
   roomNumber: string | null;
   quantity: number;
   condition: string;
+  brand: string | null;
+  serial_number: string | null;
   vendor: string | null;
   purchase_price: number | null;
   purchase_date: string | null;
@@ -34,6 +36,8 @@ export function buildRows(
       roomNumber: room?.number ?? null,
       quantity: item.quantity,
       condition: item.condition,
+      brand: item.brand,
+      serial_number: item.serial_number,
       vendor: item.vendor,
       purchase_price: item.purchase_price,
       purchase_date: item.purchase_date,
@@ -50,6 +54,8 @@ export function buildRows(
     roomNumber: null,
     quantity: item.quantity,
     condition: item.condition,
+    brand: item.brand,
+    serial_number: item.serial_number,
     vendor: item.vendor,
     purchase_price: item.purchase_price,
     purchase_date: item.purchase_date,
