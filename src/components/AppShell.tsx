@@ -1,5 +1,13 @@
 import { Link } from "@tanstack/react-router";
-import { LayoutDashboard, DoorClosed, Wrench, FileBarChart, Menu, Type } from "lucide-react";
+import {
+  LayoutDashboard,
+  DoorClosed,
+  Wrench,
+  FileBarChart,
+  Wallet,
+  Menu,
+  Type,
+} from "lucide-react";
 import { useState, type ReactNode } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -17,6 +25,7 @@ const nav = [
   { to: "/", label: "Ringkasan", icon: LayoutDashboard },
   { to: "/kamar", label: "Kamar", icon: DoorClosed },
   { to: "/fasilitas", label: "Fasilitas Utama", icon: Wrench },
+  { to: "/pengeluaran", label: "Pengeluaran", icon: Wallet },
   { to: "/laporan", label: "Laporan", icon: FileBarChart },
 ] as const;
 
